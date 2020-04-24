@@ -12,3 +12,4 @@ chown -R www-data.www-data html/
 docker-compose up -d
 ```
 
+Link Original: https://github.com/abelmferreira/docker-compose-glpi
