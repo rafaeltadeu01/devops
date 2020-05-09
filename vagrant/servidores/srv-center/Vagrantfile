@@ -26,23 +26,11 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 80, host: 80
   config.vm.network "forwarded_port", guest: 443, host: 443
   config.vm.network "forwarded_port", guest: 8001, host: 8001
-  config.vm.network "forwarded_port", guest: 8441, host: 8441
   config.vm.network "forwarded_port", guest: 8002, host: 8002
-  config.vm.network "forwarded_port", guest: 8442, host: 8442
   config.vm.network "forwarded_port", guest: 8003, host: 8003
-  config.vm.network "forwarded_port", guest: 8443, host: 8443
   config.vm.network "forwarded_port", guest: 8004, host: 8004
-  config.vm.network "forwarded_port", guest: 8444, host: 8444
   config.vm.network "forwarded_port", guest: 8005, host: 8005
-  config.vm.network "forwarded_port", guest: 8445, host: 8445
   config.vm.network "forwarded_port", guest: 8006, host: 8006
-  config.vm.network "forwarded_port", guest: 8446, host: 8446
-  config.vm.network "forwarded_port", guest: 8007, host: 8007
-  config.vm.network "forwarded_port", guest: 8447, host: 8447
-  config.vm.network "forwarded_port", guest: 8008, host: 8008
-  config.vm.network "forwarded_port", guest: 8448, host: 8448
-  config.vm.network "forwarded_port", guest: 8009, host: 8009
-  config.vm.network "forwarded_port", guest: 8449, host: 8449
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine and only allow access
@@ -68,13 +56,13 @@ Vagrant.configure("2") do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-  # config.vm.provider "virtualbox" do |vb|
+   config.vm.provider "virtualbox" do |vb|
   #   # Display the VirtualBox GUI when booting the machine
-  #   vb.gui = true
+  # vb.gui = true
   #
   #   # Customize the amount of memory on the VM:
-  #   vb.memory = "1024"
-  # end
+     vb.memory = "1024"
+   end
   #
   # View the documentation for the provider you are using for more
   # information on available options.
@@ -82,11 +70,12 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  #config.vm.provision "shell", inline: <<-SHELL
+  config.vm.provision "shell", inline: <<-SHELL
   #   apt-get update
   #   apt-get install -y apache2
-  #
-  #SHELL
+  git clone https://github.com/rafaeltadeu01/ITcenter.git
+
+  SHELL
 end
 #### Reditor: Rafael Tadeu
 #### E-mail : rafaeltadeu01@hotmail.com
