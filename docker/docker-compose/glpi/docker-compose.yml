@@ -4,9 +4,9 @@
 
 version: '3.3'
 services: 
-    mysql-glpi:
-       image: mysql:5.7.23
-       container_name: srv-db-glpi
+   mysql-glpi:
+    image: mysql:5.7.23
+    container_name: srv-db-glpi
     labels:
        conteiner.description: "Server DataBase MySQL5.7 FOR GLPI"
     hostname: srv-db-glpi
@@ -16,22 +16,22 @@ services:
     volumes:
        - ./storage/mysq-glpi/var/lib/mysql:/var/lib/mysql
     env_file:
-       - ./conf/mysql57/mysql-glpi.env
+       - ./mysql-glpi.env
 
-    glpi:
-       image: diouxx/glpi
-       container_name : srv-glpi
-       labels:
-          conteiner.description: "Application GLPI"
-       hostname: srv-glpi
-       restart: always
-       ports:
-          - "80:80"
-       volumes:
-          - ./storage/glpi/:/var/www/html/glpi
-       env_file:
-          - ./conf/glpi/glpi.env
-       depends_on:
-          - mysql-glpi
-       links :
-          - mysql-glpi
+   glpi:
+    image: diouxx/glpi
+    container_name : srv-glpi
+    labels:
+       conteiner.description: "Application GLPI"
+    hostname: srv-glpi
+    restart: always
+    ports:
+       - "80:80"
+    volumes:
+       - ./storage/glpi/:/var/www/html/glpi
+    env_file:
+       - ./glpi.env
+    depends_on:
+       - mysql-glpi
+    links :
+       - mysql-glpi

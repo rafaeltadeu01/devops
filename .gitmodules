@@ -1,0 +1,3 @@
+[submodule "docker/docker-compose/glpi/glpi"]
+	path = docker/docker-compose/glpi/glpi
+	url = https://github.com/rafaeltadeu01/devops

@@ -1,0 +1,6 @@
+#### APPLICATION GLPI
+#### Autor   : Rafael Tadeu Lima Almeida
+#### Contato : rafaeltadeu01@hotmail.com
+
+version: '3.3'
+services:
