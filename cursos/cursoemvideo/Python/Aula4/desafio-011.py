@@ -1,3 +1,4 @@
+## Calculadora de utilização de tinta em litros
 aut = float(input('Qual é a altura da parede: '))
 lag = float(input('Qual é a largura da parede: '))
 area = aut*lag

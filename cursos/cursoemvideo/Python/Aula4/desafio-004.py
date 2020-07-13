@@ -1,3 +1,4 @@
+## verifica o tipo de dado de uma string
 text = input('Digite um texto')
 print('O tipo primitivo dess valor:', type(text))
 print('Só tem espaço:', text.isspace())

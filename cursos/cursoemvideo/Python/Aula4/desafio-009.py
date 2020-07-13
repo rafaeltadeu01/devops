@@ -1,3 +1,4 @@
+## Construtor de Taboadas
 n = int(input('Digité o valor: '))
 print('A tabuada do numero {} ficou assim:')
 print('-' * 20)

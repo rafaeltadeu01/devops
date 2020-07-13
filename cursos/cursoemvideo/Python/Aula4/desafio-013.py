@@ -1,3 +1,4 @@
+## Calculadora de almento de salario
 sal = float(input('Digite o valor do salario: '))
 alm = sal * (15/100)
 som = sal + alm
